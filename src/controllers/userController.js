@@ -1,5 +1,6 @@
-export const home = (req, res) => res.render("home");
+import { lottoData } from "../fetch";
 
+export const home = (req, res) => res.render("home", { lottoData });
 export const getLotto = (req, res) => res.render("lotto");
 export const postLotto = (req, res) => {
   const numArray = [];
