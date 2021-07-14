@@ -4,7 +4,11 @@ block content
     div 
         span 일반 번호: 
         span=lottoNum
-    div
-        span 연속된 숫자가 2개 까지 나오는 번호
+    div#lotto_EditNum
+        span 변형 번호: 
+        span#lotto__EditNumResult=lottoNum2
+        br
+        span 번호가 안 바뀔시 다시 돌리기
+
     form(method="POST")
         input(value="번호 돌리기", type="submit")
