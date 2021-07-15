@@ -3,7 +3,7 @@ import globalRouter from "./routers/globalRouter";
 
 const app = express();
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.set("view engine", "pug");
 app.set("views", "src/views");
@@ -14,4 +14,4 @@ const handleListening = () => {
   console.log(`Server listening on port ${PORT}`);
 };
 
-app.listen(process.env.PORT || PORT, handleListening);
+app.listen(PORT, handleListening);
