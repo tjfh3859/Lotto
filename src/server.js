@@ -14,4 +14,4 @@ const handleListening = () => {
   console.log(`Server listening on port ${PORT}`);
 };
 
-app.listen(PORT, handleListening);
+app.listen(process.env.PORT || PORT, handleListening);
