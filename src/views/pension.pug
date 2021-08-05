@@ -2,5 +2,15 @@ extends layout
 
 block content
     div 
-        span 조 추첨
-    input(value="번호 돌리기", type="submit")
+        span 조 선택 
+        input(value="1조", type="submit")
+        input(value="2조", type="submit")
+        input(value="3조", type="submit")
+        input(value="4조", type="submit")
+        input(value="5조", type="submit")
+    div 
+        span 조: 
+        span=pensionNum
+
+    form(method="POST")
+        input(value="번호 돌리기", type="submit")
