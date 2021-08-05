@@ -1,8 +1,5 @@
-import { lottoData } from "../fetch";
-
 export const home = (req, res) => {
-  console.log(lottoData);
-  res.render("home", { lottoData });
+  res.render("home");
 };
 
 export const getLotto = (req, res) => res.render("lotto");
@@ -87,4 +84,21 @@ export const postLotto = (req, res) => {
   }
 };
 
-export const pension = (req, res) => res.render("pension");
+export const getPension = (req, res) => res.render("pension");
+export const postPension = (req, res) => {
+  const pensionArray = [];
+  let pensionMixedNum = [];
+
+  for (var nums = 1; nums <= 9; nums++) {
+    pensionArray.push(nums);
+  }
+  while (pensionArray.length > 0) {
+    const num = Math.floor(Math.random() * pensionArray.length);
+    const remainNums = pensionArray.splice(num, 1)[0];
+    pensionMixedNum.push(remainNums);
+  }
+  const pensionNum = pensionMixedNum.slice(0, 6);
+  console.log(pensionNum);
+
+  res.render("pension", { pensionNum });
+};
