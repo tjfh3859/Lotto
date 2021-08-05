@@ -1,7 +1,8 @@
 import fetch from "node-fetch";
 
-const lottourl =
-  "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=971";
+const lottoRound = 974;
+
+const lottourl = `https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${lottoRound}`;
 
 export const lottoData = fetch(lottourl)
   .then((data) => {

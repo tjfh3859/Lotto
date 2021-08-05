@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js"
+    "start": "node build/init.js",
+    "build:server": "babel src -d build",
+    "dev:server": "nodemon --exec babel-node src/init.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,12 @@
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.9",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
     "@babel/node": "^7.14.7",
     "@babel/preset-env": "^7.14.7"
   }
