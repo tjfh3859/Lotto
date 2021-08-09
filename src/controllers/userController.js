@@ -86,19 +86,19 @@ export const postLotto = (req, res) => {
 
 export const getPension = (req, res) => res.render("pension");
 export const postPension = (req, res) => {
-  const pensionArray = [];
-  let pensionMixedNum = [];
+  const arrayNum = Math.floor(Math.random() * 9);
+  const arrayNum2 = Math.floor(Math.random() * 9);
+  const arrayNum3 = Math.floor(Math.random() * 9);
+  const arrayNum4 = Math.floor(Math.random() * 9);
+  const arrayNum5 = Math.floor(Math.random() * 9);
+  const arrayNum6 = Math.floor(Math.random() * 9);
 
-  for (var nums = 1; nums <= 9; nums++) {
-    pensionArray.push(nums);
-  }
-  while (pensionArray.length > 0) {
-    const num = Math.floor(Math.random() * pensionArray.length);
-    const remainNums = pensionArray.splice(num, 1)[0];
-    pensionMixedNum.push(remainNums);
-  }
-  const pensionNum = pensionMixedNum.slice(0, 6);
-  console.log(pensionNum);
-
-  res.render("pension", { pensionNum });
+  res.render("pension", {
+    arrayNum,
+    arrayNum2,
+    arrayNum3,
+    arrayNum4,
+    arrayNum5,
+    arrayNum6,
+  });
 };

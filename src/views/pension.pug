@@ -2,15 +2,20 @@ extends layout
 
 block content
     div 
-        span 조 선택 
-        input(value="1조", type="submit")
-        input(value="2조", type="submit")
-        input(value="3조", type="submit")
-        input(value="4조", type="submit")
-        input(value="5조", type="submit")
+        span 조 선택 : 
+            input(value="1조", type="button")
+            input(value="2조", type="button")
+            input(value="3조", type="button")
+            input(value="4조", type="button")
+            input(value="5조", type="button")
     div 
         span 조: 
-        span=pensionNum
+        span=arrayNum
+        span=arrayNum2
+        span=arrayNum3
+        span=arrayNum4
+        span=arrayNum5
+        span=arrayNum6
 
     form(method="POST")
         input(value="번호 돌리기", type="submit")
