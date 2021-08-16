@@ -86,19 +86,19 @@ export const postLotto = (req, res) => {
 
 export const getPension = (req, res) => res.render("pension");
 export const postPension = (req, res) => {
-  const arrayNum = Math.floor(Math.random() * 9);
-  const arrayNum2 = Math.floor(Math.random() * 9);
-  const arrayNum3 = Math.floor(Math.random() * 9);
-  const arrayNum4 = Math.floor(Math.random() * 9);
-  const arrayNum5 = Math.floor(Math.random() * 9);
-  const arrayNum6 = Math.floor(Math.random() * 9);
+  const pensionNum = Math.floor(Math.random() * 9);
+  const pensionNum2 = Math.floor(Math.random() * 9);
+  const pensionNum3 = Math.floor(Math.random() * 9);
+  const pensionNum4 = Math.floor(Math.random() * 9);
+  const pensionNum5 = Math.floor(Math.random() * 9);
+  const pensionNum6 = Math.floor(Math.random() * 9);
 
   res.render("pension", {
-    arrayNum,
-    arrayNum2,
-    arrayNum3,
-    arrayNum4,
-    arrayNum5,
-    arrayNum6,
+    pensionNum,
+    pensionNum2,
+    pensionNum3,
+    pensionNum4,
+    pensionNum5,
+    pensionNum6,
   });
 };
